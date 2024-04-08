@@ -74,7 +74,7 @@ function Filters({showFilters, setShowFilters, filters, setFilters,}) {
                             }else{
                                 setFilters({
                                     ...filters,
-                                    category:filters.age.filter(
+                                    category:filters.category.filter(
                                         (item)=>item!== category.value
                                     ),
                                 });

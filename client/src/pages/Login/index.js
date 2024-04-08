@@ -13,6 +13,7 @@ const rules = [
   },
 ];
 function Login() {
+
   const navigate=useNavigate();
   const dispatch =useDispatch();
   const onFinish = async(values) => {
@@ -39,11 +40,17 @@ function Login() {
     }
 
   },[]);
+
+  // const Loginwithgoogle=()=>{
+  //   window.open("http://localhost:3006/auth/google/callback","_self")
+  // }
+
+
   return (
     <div className="h-screen bg-primary flex justify-center items-center">
       <div className="bg-white p-5 rounded w-[450px]">
         <h1 className="text-primary text-2xl">
-          SMP - <span className="text-gray-400 text-2xl">LOGIN</span>
+          MARKET - <span className="text-gray-400 text-2xl">LOGIN</span>
         </h1>
         <Divider />
         <Form layout="vertical" onFinish={onFinish}>
@@ -63,8 +70,16 @@ function Login() {
                 Register
               </Link>
             </span>
+            
           </div>
+          
         </Form>
+        {/* <div className="mt-5 text-center">
+          
+        <button className="login-with-google-btn" onClick={Loginwithgoogle}>
+              Sign In With Google
+            </button>
+        </div> */}
       </div>
     </div>
   );

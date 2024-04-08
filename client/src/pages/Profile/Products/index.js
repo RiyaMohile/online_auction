@@ -22,7 +22,9 @@ function Products() {
       try{
         dispatch(SetLoader(true));
         const response=await GetProducts({
+         //user see their own product
           seller:user._id,
+ //-------------------------------
         });
         dispatch(SetLoader(false));
         if(response.success){
@@ -62,14 +64,11 @@ function Products() {
           className="w-20 h-20 object-cover rounded-md"/>
           );
         }
-
       },
       {
         title:"Name",
         dataIndex:"name",
       },
-      
-      
       {
         title:"Price",
         dataIndex:"price",
@@ -90,8 +89,6 @@ function Products() {
         title:"Added On",
         dataIndex:"createdAt",
         render:(text,record)=> moment(record.createdAt).format("DD-MM-YYYY hh:mm A"),
-
-        
       },
       {
         title:"Action",
@@ -117,10 +114,7 @@ function Products() {
         }
       },
     ];
-
-    
-    
-
+   
     useEffect(()=>{
       getData();
     },[]);
@@ -129,7 +123,7 @@ function Products() {
         <div className="flex justify-end mb-2">
             <Button type='default'
             onClick={()=> setShowProductForm(true)}>
-                Add Products
+                Add Product
             </Button>
         </div>
 

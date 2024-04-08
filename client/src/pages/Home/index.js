@@ -37,6 +37,7 @@ function Home() {
 
   useEffect(()=>{
     getData();
+    console.log(filters);
   },[filters]);
 
   return (

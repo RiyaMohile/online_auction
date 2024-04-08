@@ -1,3 +1,5 @@
+//this is the structure for api call in the frontend
+
 import { axiosInstance } from "./axiosInstance";
 
 //register user
@@ -30,6 +32,8 @@ export const GetCurrentUser = async()=>{
         return error.message;
     }
 };
+
+
 //get all users in a Products ke bagal m User m
 export const GetAllUsers = async()=>{
     try{

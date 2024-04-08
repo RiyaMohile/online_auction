@@ -39,6 +39,7 @@ router.post("/add-product", authMiddleware, async (req, res) => {
 router.post("/get-products", async (req, res) => {
   try {
     const { seller, category = [], age = [], status } = req.body;
+    //by using the filter the user only see there products
     let filters = {};
     if (seller) {
       filters.seller = seller;

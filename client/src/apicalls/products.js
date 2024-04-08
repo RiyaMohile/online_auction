@@ -1,6 +1,7 @@
-//work on integration
+//work on add api integration in a frontend
 import { axiosInstance } from "./axiosInstance";
 
+//ad a new product 
 export const AddProduct = async(payload)=>{
     try{
         const response = await axiosInstance.post("/api/products/add-product",payload);

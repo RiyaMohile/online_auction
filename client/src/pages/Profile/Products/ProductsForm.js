@@ -1,3 +1,5 @@
+//UI design
+
 import { Modal, Tabs, Form, Input, Row, Col, message } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { useDispatch, useSelector } from "react-redux";
@@ -111,7 +113,7 @@ function ProductsForm({
                 <TextArea type="text" />
               </Form.Item>
 
-              <Row gutter={(16, 16)}>
+              <Row gutter={[16, 16]}>
                 <Col span={8}>
                   <Form.Item label="Price" name="price" rules={rules}>
                     <Input type="number" />

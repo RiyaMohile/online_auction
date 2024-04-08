@@ -6,6 +6,8 @@ import { RegisterUser } from "../../apicalls/users";
 import { useDispatch } from "react-redux";
 import { SetLoader } from "../../redux/loadersSlice";
 
+
+//Validation
 const rules = [
   {
     required: true,
@@ -42,7 +44,7 @@ function Register() {
     <div className="h-screen bg-primary flex justify-center items-center">
       <div className="bg-white p-5 rounded w-[450px]">
         <h1 className="text-primary text-2xl">
-          SMP - <span className="text-gray-400 text-2xl">REGISTER</span>
+          MARKET - <span className="text-gray-400 text-2xl">REGISTER</span>
         </h1>
         <Divider />
         <Form layout="vertical" onFinish={onFinish}>

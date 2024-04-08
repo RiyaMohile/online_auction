@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Admin from "./pages/Admin";
 import ProductInfo from "./pages/PrductInfo";
 
+
 function App() {
   const { loading } = useSelector((state) => state.loaders);
   return (

@@ -4,6 +4,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const authMiddleware = require("../middlewares/authMiddleware");
 
+
+//API
 //new user registration
 router.post("/register", async (req, res) => {
   try {
@@ -22,7 +24,7 @@ router.post("/register", async (req, res) => {
     await newUser.save();
     res.send({
       success: true,
-      message: "user created successfully",
+      message: "User created successfully",
     });
   } catch (error) {
     res.send({
@@ -55,14 +57,14 @@ router.post("/login", async (req, res) => {
     }
 
     //create and assign token
-    const token = jwt.sign({ userId: user._id }, "3h1nUEchp4QPDA4g", {
-      expiresIn: "1d",
+    const token = jwt.sign({ userId: user._id }, process.env.jwt_secret, {
+      expiresIn: "1d"
     });
 
     //send response
     res.send({
       success: true,
-      message: "user logged in successfully",
+     message: "User logged in successfully",
       data: token,
     });
   } catch (error) {

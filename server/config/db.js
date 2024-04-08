@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://riyamohile812:3h1nUEchp4QPDA4g@cluster2.x8vqjgc.mongodb.net/sheymp?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGO_URL);
 
 const connection = mongoose.connection;
 

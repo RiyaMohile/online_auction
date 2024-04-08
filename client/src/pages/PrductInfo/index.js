@@ -148,7 +148,7 @@ function ProductInfo() {
               {
               product.ShowBidsonProductPage &&
               product?.bids?.map((bid)=>{
-                 return 
+                 return (
                  <div className="border border-gray-300 border-solid p-3 rounded mt-5">
                   <div className="flex justify-between  text-gray-700">
                     <span>Name</span>
@@ -166,6 +166,7 @@ function ProductInfo() {
                     </span>
                   </div>
                  </div>
+                 )
               })}
             </div>
           </div>
