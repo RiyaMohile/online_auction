@@ -38,16 +38,15 @@ function Login() {
     if (localStorage.getItem("token")) {
       navigate("/");
     }
-
+    
   },[]);
-
-  // const Loginwithgoogle=()=>{
-  //   window.open("http://localhost:3006/auth/google/callback","_self")
-  // }
-
-
+  
+  
+  
   return (
+    
     <div className="h-screen bg-primary flex justify-center items-center">
+      
       <div className="bg-white p-5 rounded w-[450px]">
         <h1 className="text-primary text-2xl">
           MARKET - <span className="text-gray-400 text-2xl">LOGIN</span>
@@ -74,12 +73,6 @@ function Login() {
           </div>
           
         </Form>
-        {/* <div className="mt-5 text-center">
-          
-        <button className="login-with-google-btn" onClick={Loginwithgoogle}>
-              Sign In With Google
-            </button>
-        </div> */}
       </div>
     </div>
   );

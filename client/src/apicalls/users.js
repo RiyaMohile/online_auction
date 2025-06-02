@@ -34,7 +34,7 @@ export const GetCurrentUser = async()=>{
 };
 
 
-//get all users in a Products ke bagal m User m
+//get all users
 export const GetAllUsers = async()=>{
     try{
         const response = await axiosInstance.get("/api/users/get-users");

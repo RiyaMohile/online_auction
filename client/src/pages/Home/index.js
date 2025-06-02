@@ -51,8 +51,6 @@ function Home() {
        />
       )}
 
-      
-      
       <div className="flex flex-col gap-5 w-full">
         <div className="flex gap-5 items-center">
           {!showFilters && ( 
@@ -77,8 +75,7 @@ function Home() {
                 alt=""
               />
               
-
-              <div className="px-2 flex flex-col ">
+                <div className="px-2 flex flex-col ">
                 <h1 className="text-lg font-semibold">{product.name}</h1>
                 <p className="text-sm ">
                 {product.age}{' '}

@@ -123,7 +123,7 @@ function ProductsForm({
                   <Form.Item label="Category" name="category" rules={rules}>
                     <select>
                       <option value="">Select</option>
-                      <option value="elctronics">Electronics</option>
+                      <option value="electronics">Electronics</option>
                       <option value="fashion">Fashion</option>
                       <option value="home">Home</option>
                       <option value="sports">Sports</option>
@@ -178,7 +178,7 @@ function ProductsForm({
                   checked={formRef.current?.getFieldValue(
                     "ShowBidsonProductPage"
                   )}
-                  style={{width:50, marginLeft:20}}
+                  style={{ width: 50, marginLeft: 20 }}
                 />
               </Form.Item>
             </Form>

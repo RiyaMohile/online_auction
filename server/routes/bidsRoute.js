@@ -30,8 +30,6 @@ router.post("/get-all-bids",authMiddleware, async (req, res) => {
         if(buyer){
             filters.buyer=buyer;
         }
-
-    
     const bids = await Bid.find( filters)
     .populate("product")
     .populate("buyer")

@@ -9,13 +9,12 @@ import Bids from './Bids';
 
 function Products() {
   const[showBids,setShowBids]=React.useState(false);
-  
-  
-    const [selectedProduct,setSelectedProduct]=React.useState(null);
-    const [showProductForm, setShowProductForm]=React.useState(false);
-    const {user}=useSelector((state)=>state.users);
+  const [selectedProduct,setSelectedProduct]=React.useState(null);
+  const [showProductForm, setShowProductForm]=React.useState(false);
+  const {user}=useSelector((state)=>state.users);
     // ------------add a products table-----------
     const [products,setProducts]=React.useState([]);
+    
     const dispatch=useDispatch();
 
      const getData=async()=>{
